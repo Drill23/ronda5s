@@ -1779,7 +1779,8 @@ function launchTyped(code){
 // ---------- ronda: saída no formato do Excel ----------
 function grouped(items){ const g={}; items.forEach(x=>{(g[x.c]=g[x.c]||[]).push(x);}); return Object.keys(g).sort(cmpCode).map(c=>({c,items:g[c]})); }
 function buildText(r,header){
-  const lines=grouped(r.items).map(g=>g.c+'\t'+g.items.length+'\t'+g.items.map(x=>cleanTxt(x.t)).join(' ||| '));
+  // formato da aba LANÇAMENTO_5S: "CÓDIGO QUANTIDADE Texto ||| Texto" (tudo na coluna A)
+  const lines=grouped(r.items).map(g=>g.c+' '+g.items.length+' '+g.items.map(x=>cleanTxt(x.t)).join(' ||| '));
   let h='';
   if(header) h='ÁREA AUDITADA: '+r.area+'\nAVALIADOR: '+(r.aval||'')+'\nDATA DA AUDITORIA: '+brDate(r.data)+'\n\n';
   return h+lines.join('\n');
@@ -2097,4 +2098,4 @@ setTimeout(()=>{ boot(); refresh(); if(!S.area) openSetup(); },30);
 if('serviceWorker' in navigator && /^https?:/.test(location.protocol)){ window.addEventListener('load',()=>{ navigator.serviceWorker.register('sw.js').catch(()=>{}); }); }
 </script>
 </body>
-</html>
+  </html>
