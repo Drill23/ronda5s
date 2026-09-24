@@ -1,0 +1,24 @@
+RONDA 5S — como colocar no ar (GitHub Pages, grátis)
+
+1. Crie uma conta em github.com (se ainda não tiver).
+2. Clique em "New repository". Nome: ronda5s. Marque "Public". Crie.
+3. Na página do repositório, clique em "uploading an existing file"
+   e arraste TODOS os arquivos desta pasta (index.html, sw.js,
+   manifest.webmanifest e os 3 icon-*.png). Clique em "Commit changes".
+4. Vá em Settings > Pages. Em "Branch", escolha "main" e a pasta "/ (root)". Salve.
+5. Espere 1 ou 2 minutos. O endereço aparece ali mesmo:
+   https://SEU-USUARIO.github.io/ronda5s/
+
+No iPhone:
+- Abra o endereço no Safari (com internet, só na primeira vez).
+- Toque em Compartilhar > "Adicionar à Tela de Início".
+- Pronto: ícone "Ronda 5S", abre em tela cheia e funciona sem internet.
+
+No Android: abra no Chrome > menu (3 pontinhos) > "Instalar app" ou "Adicionar à tela inicial".
+
+Para atualizar o app depois: suba o index.html novo e, no sw.js, troque
+o número da versão (ex.: ronda5s-v2 por ronda5s-v3). Os celulares pegam a versão nova na próxima
+vez que abrirem com internet.
+
+Atenção: repositório público = qualquer pessoa com o endereço consegue abrir.
+Nada da sua ronda fica no GitHub; os lançamentos ficam só em cada celular.
